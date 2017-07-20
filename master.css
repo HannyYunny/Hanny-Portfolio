@@ -1,0 +1,315 @@
+@charset "UTF-8";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button, input, textarea {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: 'Roboto', 'Nanum Barun Gothic', sans-serif;
+}
+a {
+	text-decoration: none;
+	color: #000;
+	display: block;
+}
+a[class^="btn_"], button[class^="btn_"] {
+	text-align: center;
+	box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, div {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*--------------------------------------------------*/
+
+body {
+	font-family: 'Roboto', 'Nanum Barun Gothic', sans-serif;
+	background-color: #fff;
+	color: #000;
+}
+body, html {
+	height: 100%;
+}
+
+body #wrap {
+	width: 100%;
+	height: 100%;
+	display: table;
+	margin: 0 auto;
+	table-layout: fixed;
+}
+/*---------------------Header-----------------------------*/
+#wrap .header {
+	position: relative;
+	height: 98px;
+}
+
+#wrap .header-inner {
+	width: 100%;
+  height: 97px;
+  z-index: 30;
+  background: rgba(255, 255, 255, 0.7);
+  box-sizing: content-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+	border-bottom: 1px solid #d6d6d6;
+}
+#wrap .header-inner .inner-inner {
+	height: 97px;
+	width: 1168px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#wrap .header-inner .minilogo {
+	background: url(./image/shortcut.png) no-repeat 50% -5%;
+  background-size: 100%;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 15px;
+  left: 42px;
+  z-index: 50;
+}
+#wrap .header-inner .minilogo:hover {
+	opacity: 0.7;
+	transition: all 0.3s ease;
+}
+#wrap .header-inner .minilogo a {
+	width: 77px;
+  height: 72px;
+  position: absolute;
+  left: 7px;
+  top: 0;
+}
+#wrap .header-inner .minilogo a + a {
+	width: 108px;
+	left: 77px;
+}
+
+.header .header-inner .menu {
+	height: 62px;
+}
+
+.header .header-inner .menu ul {
+	position: absolute;
+	left: 330px;
+	top: 28px;
+	height: 36px;
+	display: block;
+	z-index: 30;
+	-webkit-box-pack: center;
+}
+.header .header-inner .menu ul li {
+  float: left;
+  position: relative;
+  margin-top: 10px;
+  padding-bottom: 12px;
+}
+.header .header-inner .menu ul li+li {
+	margin-left: 72px;
+}
+
+.header .header-inner .menu li > a span{
+	font-size: 17px;
+	color: #000;
+}
+.header .header-inner .menu ul li a span:hover, .header .header-inner .menu ul li i:hover {
+  color: #ababab;
+	text-shadow: 2px 2px 8px #eee;
+	transition: color 0.4s ease;
+}
+.header .header-inner .menu ul li i {
+	margin-left: 130px;
+	color: #355089;
+	max-width: 100%;
+}
+.header .header-inner .menu li:nth-child(5) {
+	margin-top: 5px;
+}
+
+/*----------------------------------------------------------*/
+/*-----------------main-visual--------------------------------*/
+#main-visual{
+	height: 100%;
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+  background: #000;
+}
+#scenes {
+	position: absolute;
+	z-index: 1;
+	top: 0px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+#scenes .scene {
+	position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+#scenes .scene .background {
+	width: 1920px;
+	height: 100%;
+}
+#scenes .scene .background:before {
+	content: ' ';
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./image/dotted.png');
+}
+#scenes .scene .cover1 {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('./image/Kid-pilot.jpg');
+	background-size: cover;
+	background-position: 77% 0%;
+	opacity: 1;
+	transition: opacity 1s;
+}
+#scenes .scene .cover2 {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('./image/Iam.JPG');
+	background-size: cover;
+	background-position: 50% 0%;
+	opacity: 1;
+	transition: opacity 1s;
+}
+.scene-controller {
+  text-align: center;
+}
+
+#main-visual .scene-controller #moveleft, #main-visual .scene-controller #moveright {
+	display: block;
+	position: absolute;
+	top: 50%;
+	z-index: 5;
+	color: #ddd;
+}
+#main-visual .scene-controller #moveleft:hover, #main-visual .scene-controller #moveright:hover {
+	color: #fff;
+	transition: all 0.5s ease;
+}
+#scenes .scene .scene-information {
+	position: absolute;
+	display: block;
+	text-align: center;
+	width: 320px;
+	max-height: 100%;
+	z-index: 10;
+	top: 50%;
+	left: 50%;
+	color: #fff;
+	margin: -80px 0 0 -160px;
+	/*background: #000;
+	opacity: 0.5;
+	border-radius: 20px;
+	padding: 10px 0;*/
+}
+#scenes .scene .scene-information h2 {
+	font-size: 1.6em;
+	margin: 0 0 5px;
+	text-transform: uppercase;
+	line-height: 1;
+	font-weight: 700;
+	letter-spacing: 0.3em;
+	color: #fff;
+	text-align: center;
+}
+#scenes .scene h2 span {
+	display: block;
+	line-height: 0.7;
+	font-size: 0.9em;
+}
+#scenes .scene .scene-information p {
+	display: block;
+	line-height: 1.2;
+	font-size: 0.9em;
+}
+/*----------------------------------------------------------*/
+/*-----------------container-------------------------------*/
+#container {
+	position: relative;
+	max-width: 100%;
+	margin: 0 auto;
+}
+@media (min-width: 700px) {
+	#container {
+		max-width: 1060px;
+		min-height: 100%;
+		overflow: hidden;
+	}
+	#scenes .scene .scene-information {
+		width: 700px;
+		margin: -140px 0 0 -350px;
+	}
+	#scenes .scene .scene-information h2 {
+		font-size: 3.2em;
+		margin: 0 0 11px;
+	}
+	#scenes .scene h2 span {
+		line-height: 2.5;
+		font-size: 1.1em;
+	}
+	#scenes .scene .scene-information p {
+		display: block;
+		line-height: 2;
+		font-size: 1.1em;
+	}
