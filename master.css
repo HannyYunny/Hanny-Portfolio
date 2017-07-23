@@ -289,13 +289,77 @@ body #wrap {
 	position: relative;
 	max-width: 100%;
 	margin: 0 auto;
+	min-height: 100%;
+	padding: 0
 }
-@media (min-width: 700px) {
-	#container {
-		max-width: 1060px;
-		min-height: 100%;
-		overflow: hidden;
-	}
+#container .Information-table {
+	padding: 0 20px;
+	padding-top: 35px;
+	max-width: 100%;
+	position: relative;
+	text-align: center;
+	height: 100%;
+}
+#container .Information-table .Information-details {
+	position: relative;
+	width: 40%;
+	display: inline-block;
+	height: 350px;
+}
+#container .Information-table h3 {
+	font-size: 20px;
+	display: inline-block;
+	font-weight: 500;
+	overflow: hidden;
+	margin-bottom: 11px;
+	text-shadow: 0 5px 5px #aaa;
+}
+#container .Information-table ul {
+	list-style: none;
+	position: absolute;
+	left: 10px;
+}
+#container .Information-details ul li {
+	font-size: 18px;
+	line-height: 3em;
+}
+#container .chart {
+	position: absolute;
+	width: 60%;
+	left: 45%;
+	height: 350px;
+	display: block;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+#container .Information-table:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+#container .graph .graph.containers {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#container .graph .skill {
+  text-align: right;
+  padding-right: 20px;
+  line-height: 40px;
+  color: white;
+}
+#container .graph {
+	width: 100%;
+}
+
+.htmlcss {width: 70%; background-color: #4CAF50;}
+.js {width: 50%; background-color: #2196F3;}
+.jquery {width: 20%; background-color: #f44336;}
+.aws {width: 10%; background-color: #808080;}
+
+/*------------------ 반응형 웹 만들기 ---------------------------*/
+@media (min-width: 768px) {
 	#scenes .scene .scene-information {
 		width: 700px;
 		margin: -140px 0 0 -350px;
@@ -313,3 +377,21 @@ body #wrap {
 		line-height: 2;
 		font-size: 1.1em;
 	}
+	#container {
+		max-width: 1060px;
+		overflow: hidden;
+	}
+	#container .Information-table {
+		padding-top: 55px;
+		text-align: left;
+	}
+	#container .Information-table h3 {
+		font-size: 40px;
+		margin-bottom: 20px;
+	}
+	#container .Information-details ul li {
+	}
+	#container .Information-table div {
+		float: left;
+	}
+}
