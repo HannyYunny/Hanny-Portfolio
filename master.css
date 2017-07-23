@@ -129,7 +129,7 @@ body #wrap {
 
 .header .header-inner .menu ul {
 	position: absolute;
-	left: 330px;
+	left: 450px;
 	top: 28px;
 	height: 36px;
 	display: block;
@@ -302,17 +302,19 @@ body #wrap {
 }
 #container .Information-table .Information-details {
 	position: relative;
-	width: 40%;
+	width: 30%;
 	display: inline-block;
 	height: 350px;
 }
-#container .Information-table h3 {
+#container .Information-table h3, #container .career-outer h3 {
 	font-size: 20px;
-	display: inline-block;
+	color: #dd9a25;
+	display: block;
 	font-weight: 500;
-	overflow: hidden;
-	margin-bottom: 11px;
-	text-shadow: 0 5px 5px #aaa;
+	margin-bottom: 7px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #b4b4b4;
+	font-weight: 700;
 }
 #container .Information-table ul {
 	list-style: none;
@@ -326,13 +328,31 @@ body #wrap {
 #container .chart {
 	position: absolute;
 	width: 60%;
-	left: 45%;
+	left: 35%;
 	height: 350px;
 	display: block;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
+	padding-left: 7%;
+	border-left: 2px solid #ddd;
 }
+#container .storyan {
+	position: relative;
+	text-align: center;
+	margin-bottom: 45px;
+}
+#container .storyan h1 {
+	font-size: 44px;
+	font-weight: 700;
+	color: #dd9a25;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 15px;
+}
+
 #container .Information-table:after {
 	content: "";
 	display: block;
@@ -341,23 +361,98 @@ body #wrap {
 #container .graph .graph.containers {
   width: 100%;
   background-color: #ddd;
+	margin-bottom: 10px;
 }
 
 #container .graph .skill {
   text-align: right;
   padding-right: 20px;
-  line-height: 40px;
+  line-height: 30px;
   color: white;
 }
 #container .graph {
 	width: 100%;
 }
 
-.htmlcss {width: 70%; background-color: #4CAF50;}
-.js {width: 50%; background-color: #2196F3;}
-.jquery {width: 20%; background-color: #f44336;}
-.aws {width: 10%; background-color: #808080;}
+#container .graph p {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+#container .htmlcss {width: 70%; background-color: #4CAF50;}
+#container .js {width: 50%; background-color: #2196F3;}
+#container .jquery {width: 20%; background-color: #f44336;}
+#container .gitfth {width: 50%; background-color: #db9a2b;}
+/*------------------ Career List ---------------------------*/
+#container .career-outer {
+	margin: 0 auto;
+	padding: 30px 20px;
+}
+#container .career-outer .career_list_wrap {
+	position: relative;
+	padding-top: 50px;
+}
+#container .career-outer .career_list_wrap ul {
+	position: relative;
+}
+#container .career-outer .career_list_wrap ul:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+#container .career-outer .career_list_wrap ul li {
+	float: left;
+	height: 300px;
+	width: 100%;
+	border-radius: 7px;
+}
+#container .career-outer .career_list_wrap ul li a {
+	height: 100%;
+}
 
+#container .career-outer .career_list_wrap ul li a .project_Ryan {
+	background: url(./image/Iam.jpg);
+	background-position: 55% 43%;
+	background-size: 200%;
+	-webkit-filter: grayscale(100%);
+	filter: gray;
+	height: 100%;
+	border-radius: 5px;
+}
+
+#container .career-outer .career_list_wrap ul li a .coming {
+	background: url(./image/ryan.jpg) no-repeat;
+	background-position: 55% 43%;
+	background-size: 30%;
+	-webkit-filter: grayscale(100%);
+	filter: gray;
+	height: 100%;
+}
+#container .career-outer .career_list_wrap ul li a p:hover {
+	filter: none;
+	-webkit-filter: grayscale(0);
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+#container .Information-table .storyan p {
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #a7a7a7;
+    letter-spacing: 0.08em;
+}
+#container .career-outer .career_list_wrap li a h4 {
+	color: #eee;
+	position: absolute;
+	top: 5px;
+	font-size: 26px;
+	display: block;
+}
+
+#container .career-outer .career_list_wrap li a:hover h4 {
+	color: #db9a2b;
+	font-size: 36px;
+	transition: all 0.5s ease;
+}
 /*------------------ 반응형 웹 만들기 ---------------------------*/
 @media (min-width: 768px) {
 	#scenes .scene .scene-information {
@@ -379,13 +474,12 @@ body #wrap {
 	}
 	#container {
 		max-width: 1060px;
-		overflow: hidden;
 	}
 	#container .Information-table {
 		padding-top: 55px;
 		text-align: left;
 	}
-	#container .Information-table h3 {
+	#container .Information-table h3, #container .career-outer h3 {
 		font-size: 40px;
 		margin-bottom: 20px;
 	}
@@ -393,5 +487,27 @@ body #wrap {
 	}
 	#container .Information-table div {
 		float: left;
+	}
+}
+@media (min-width: 1000px) {
+	#container .career-outer {
+		max-width: 1060px;
+	}
+	#container .career-outer .career_list_wrap ul li {
+		width: 50%;
+	}
+	#container .career-outer .career_list_wrap ul li a .project_Ryan {
+		background-position: 55% 51%;
+		background-size: 200%;
+	}
+	#container .career-outer .career_list_wrap ul li a .coming {
+		background-size: 100%;
+	}
+	#container .career-outer .career_list_wrap ul li+li {
+		width: 25%;
+		padding-left: 15px;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
 	}
 }

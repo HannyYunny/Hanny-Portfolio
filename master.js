@@ -11,6 +11,7 @@ function Slider() {
   this.arrow_left = null
   this.timerID = null
   this.fscene = null
+  this.scenesheight = null
 
   this.init()
   this.initEvent()
@@ -26,13 +27,14 @@ Slider.prototype.init=function() {
   this.arrow_left = document.getElementById('moveleft')
   this.timerID=0
   this.fscene = this.pos_scenes.getElementsByClassName('scene')
+  this.scenesheight = document.getElementById('main-visual')
 }
 
 Slider.prototype.initEvent = function() {
   var objthis = this
   for (var i = 0; i < this.bgr.length; i++) {
     this.bgr[i].style.width = this.window_width +'px'
-    this.bgr[i].style.height = this.window_height + 'px'
+    this.bgr[i].style.height = this.window_height-98 + 'px'
   }
   this.arrow_right.onclick=function() {
     objthis.moveright(this)
@@ -41,6 +43,7 @@ Slider.prototype.initEvent = function() {
     objthis.moveleft(this)
   }
   objthis.addBar()
+  this.scenesheight.style.height = this.window_height-98 + 'px'
 }
 
 Slider.prototype.moveright = function() {
