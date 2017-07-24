@@ -16,7 +16,7 @@ time, mark, audio, video, button, input, textarea {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-family: 'Roboto', 'Nanum Barun Gothic', sans-serif;
+	font-family: 'Raleway', 'Nanum Barun Gothic', sans-serif;
 }
 a {
 	text-decoration: none;
@@ -57,7 +57,7 @@ table {
 /*--------------------------------------------------*/
 
 body {
-	font-family: 'Roboto', 'Nanum Barun Gothic', sans-serif;
+	font-family: 'Raleway', 'Nanum Barun Gothic', sans-serif;
 	background-color: #fff;
 	color: #000;
 }
@@ -108,8 +108,8 @@ body #wrap {
   z-index: 50;
 }
 #wrap .header-inner .minilogo:hover {
-	opacity: 0.7;
-	transition: all 0.3s ease;
+	opacity: 0.5;
+	transition: all 0.2s ease;
 }
 #wrap .header-inner .minilogo a {
 	width: 77px;
@@ -159,6 +159,7 @@ body #wrap {
 	margin-left: 130px;
 	color: #355089;
 	max-width: 100%;
+	margin-top: -7px;
 }
 .header .header-inner .menu li:nth-child(5) {
 	margin-top: 5px;
@@ -286,6 +287,10 @@ body #wrap {
 /*----------------------------------------------------------*/
 /*-----------------container-------------------------------*/
 #container {
+	height: 100%;
+	background: #fafafa;
+}
+#container-inner {
 	position: relative;
 	max-width: 100%;
 	margin: 0 auto;
@@ -306,7 +311,7 @@ body #wrap {
 	display: inline-block;
 	height: 350px;
 }
-#container .Information-table h3, #container .career-outer h3 {
+/*#container .Information-table h3, #container .career-outer h3 {
 	font-size: 20px;
 	color: #dd9a25;
 	display: block;
@@ -315,7 +320,7 @@ body #wrap {
 	padding-bottom: 10px;
 	border-bottom: 1px solid #b4b4b4;
 	font-weight: 700;
-}
+}*/
 #container .Information-table ul {
 	list-style: none;
 	position: absolute;
@@ -326,31 +331,40 @@ body #wrap {
 	line-height: 3em;
 }
 #container .chart {
-	position: absolute;
-	width: 60%;
-	left: 35%;
+	position: relative;
+	width: 100%;
+	left: 0;
 	height: 350px;
 	display: block;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	padding-left: 7%;
-	border-left: 2px solid #ddd;
+	padding-top: 50px;
+	border-top: 1px solid #ddd;
+	/*padding-left: 7%;*/
+	/*border-left: 2px solid #ddd;*/
 }
 #container .storyan {
 	position: relative;
 	text-align: center;
-	margin-bottom: 45px;
+	margin-bottom: 60px;
+	padding-top: 50px;
+	border-top: 1px solid #ddd;
 }
-#container .storyan h1 {
-	font-size: 44px;
-	font-weight: 700;
+#container .storyan h1,#container .Information-table h3, #container .career-outer h3 {
+	font-size: 26px;
+	display: block;
+	font-weight: 900;
 	color: #dd9a25;
 	text-transform: uppercase;
 	letter-spacing: 5px;
-	padding-bottom: 10px;
-	border-bottom: 1px solid #ddd;
-	margin-bottom: 15px;
+	position: absolute;
+	top: -12px;
+	left: 50%;
+	margin-left: -142px;
+	background: #fafafa;
+	text-align: center;
+	width: 300px;
 }
 
 #container .Information-table:after {
@@ -390,6 +404,7 @@ body #wrap {
 #container .career-outer .career_list_wrap {
 	position: relative;
 	padding-top: 50px;
+	border-top: solid 1px #ddd;
 }
 #container .career-outer .career_list_wrap ul {
 	position: relative;
@@ -403,7 +418,13 @@ body #wrap {
 	float: left;
 	height: 300px;
 	width: 100%;
-	border-radius: 7px;
+	padding: 5px 5px 50px 5px;
+	background: #fff;
+	border-radius: 10px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border: 1px solid #eee;
 }
 #container .career-outer .career_list_wrap ul li a {
 	height: 100%;
@@ -413,45 +434,47 @@ body #wrap {
 	background: url(./image/Iam.jpg);
 	background-position: 55% 43%;
 	background-size: 200%;
-	-webkit-filter: grayscale(100%);
-	filter: gray;
 	height: 100%;
 	border-radius: 5px;
+	filter: blur(2px);
 }
 
 #container .career-outer .career_list_wrap ul li a .coming {
-	background: url(./image/ryan.jpg) no-repeat;
+	background: url(./image/kid-pilot.jpg) no-repeat;
 	background-position: 55% 43%;
 	background-size: 30%;
-	-webkit-filter: grayscale(100%);
-	filter: gray;
 	height: 100%;
 }
-#container .career-outer .career_list_wrap ul li a p:hover {
-	filter: none;
-	-webkit-filter: grayscale(0);
-	transition: all 1s ease;
-	-webkit-transition: all 1s ease;
+#container .career-outer .career_list_wrap ul li a:hover p {
+	background-size: 220%;
+	filter: blur(0);
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
 }
 #container .Information-table .storyan p {
-    text-align: justify;
-    font-size: 18px;
-    line-height: 1.8em;
-    color: #a7a7a7;
-    letter-spacing: 0.08em;
+  text-align: justify;
+  font-size: 18px;
+  line-height: 1.8em;
+  color: #a7a7a7;
+  letter-spacing: 0.08em;
 }
 #container .career-outer .career_list_wrap li a h4 {
-	color: #eee;
-	position: absolute;
-	top: 5px;
-	font-size: 26px;
+	margin-top: 10px;
+	text-indent: 12px;
+	color: #000;
+	font-size: 16px;
 	display: block;
+	font-weight: normal;
+	font-family: "Raleway"
 }
-
-#container .career-outer .career_list_wrap li a:hover h4 {
-	color: #db9a2b;
-	font-size: 36px;
-	transition: all 0.5s ease;
+#container .career-outer .career_list_wrap li a span {
+	margin-top: 3px;
+	text-indent: 12px;
+	color: #aaa;
+	font-size: 12px;
+	display: block;
+	font-weight: normal;
+	font-family: "Raleway"
 }
 /*------------------ 반응형 웹 만들기 ---------------------------*/
 @media (min-width: 768px) {
@@ -472,32 +495,35 @@ body #wrap {
 		line-height: 2;
 		font-size: 1.1em;
 	}
-	#container {
+	#container-inner {
 		max-width: 1060px;
 	}
 	#container .Information-table {
 		padding-top: 55px;
 		text-align: left;
 	}
-	#container .Information-table h3, #container .career-outer h3 {
+	/*#container .Information-table h3, #container .career-outer h3 {
 		font-size: 40px;
 		margin-bottom: 20px;
-	}
+	}*/
 	#container .Information-details ul li {
 	}
-	#container .Information-table div {
+	/*#container .Information-table div {
 		float: left;
-	}
+	}*/
 }
 @media (min-width: 1000px) {
 	#container .career-outer {
 		max-width: 1060px;
 	}
 	#container .career-outer .career_list_wrap ul li {
-		width: 50%;
+		width: 47%;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
 	}
 	#container .career-outer .career_list_wrap ul li a .project_Ryan {
-		background-position: 55% 51%;
+		background-position: 55% 41%;
 		background-size: 200%;
 	}
 	#container .career-outer .career_list_wrap ul li a .coming {
@@ -509,5 +535,6 @@ body #wrap {
 		box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
+		margin-left: 10px;
 	}
 }
