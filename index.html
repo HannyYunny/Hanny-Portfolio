@@ -159,10 +159,61 @@
 								</a>
 							</li>
 						</ul>
+						<!-- <ul class="career_list nexton">
+							<li class="">
+								<a href="#">
+									<p class="coming soon">
+									</p>
+								</a>
+							</li>
+							<li class="">
+								<a href="#">
+									<p class="coming soon">
+									</p>
+								</a>
+							</li>
+							<li class="">
+								<a href="#">
+									<p class="coming soon">
+									</p>
+								</a>
+							</li>
+						</ul> -->
 					</div>
 				</div>
 			</div>
+			<div class="contact-outer">
+				<div class="contact-inner">
+					<h3>Contact</h3>
+					<form id="ajax-contact" method="post" action="mailer.php">
+						<div class="small-box">
+							<div class="field">
+								<label for="name">Name</label><br />
+								<input type="text" id="name" name="name" required>
+							</div>
+							<div class="field">
+								<label for="email">Email</label><br />
+								<input type="email" id="email" name="email" placeholder="ex) abcd@gmail.com" required>
+							</div>
+						</div>
+
+						<div class="large-box">
+							<div class="field">
+								<label for="message">Message</label><br />
+								<textarea id="message" name="message" required></textarea>
+							</div>
+						</div>
+
+						<div class="field">
+								<button type="submit">Send</button>
+						</div>
+					</form>
+				</div>
+			</div>
 		</div>
+		<footer id="footer" style="height:100px;">
+
+		</footer>
 	</div>
 	<script type="text/javascript" src="./master.js"></script>
 </body>
