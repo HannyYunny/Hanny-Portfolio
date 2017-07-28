@@ -186,36 +186,38 @@
 				<div class="contact-inner">
 					<h3>Contact</h3>
 					<div id="form-messages"></div>
-					<form id="ajax-contact" method="post" action="mailer.php">
-						<div class="small-box">
-							<div class="field">
-								<label for="name">Name</label><br />
-								<input type="text" id="name" name="name" placeholder="Name" required>
+					<form id="ajax-contact" method="post" action="./mailer.php">
+						<div class="wrap-box">
+							<div class="small-box">
+								<div class="field">
+									<label for="name">Name</label><br />
+									<input type="text" id="name" name="name" placeholder="Name" required="">
+								</div>
+								<div class="field">
+									<label for="email">Email</label><br />
+									<input type="email" id="email" name="email" placeholder="ex) abcd@gmail.com" required="">
+								</div>
+								<!-- <div class="field">
+									<label for="subject">Subject</label><br />
+									<input type="subject" id="subject" name="subject" placeholder="subject" required="">
+								</div> -->
+								<div class="field-information">
+									<p>Tel : +82 - 10 - 4915 - 9308</p>
+									<p>Will update SNS account</p>
+								</div>
 							</div>
-							<div class="field">
-								<label for="email">Email</label><br />
-								<input type="email" id="email" name="email" placeholder="ex) abcd@gmail.com" required>
-							</div>
-							<div class="field">
-								<label for="subject">Subject</label><br />
-								<input type="subject" id="subject" name="subject" placeholder="subject" required>
-							</div>
-							<div class="field-information">
-								<p>Tel : +82 - 10 - 4915 - 9308</p>
-								<p>Will update SNS account</p>
+							<div class="large-box">
+								<div class="field">
+									<label for="message">Message</label><br />
+									<textarea id="message" name="message" placeholder="Type message" required=""></textarea>
+								</div>
 							</div>
 						</div>
-
-						<div class="large-box">
-							<div class="field">
-								<label for="message">Message</label><br />
-								<textarea id="message" name="message" placeholder="Type message" required></textarea>
-							</div>
+						<div class="btnfield">
+							<input type="submit" value="send" name="submit">
+							<!-- <input type="submit" value="send" name="submit"> -->
 						</div>
 					</form>
-					<div class="btnfield">
-							<button type="submit">Send</button>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -224,8 +226,9 @@
 		</footer>
 	</div>
 	<script type="text/javascript" src="./master.js"></script>
+	<script src="jquery-2.1.0.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script type="text/javascript" src="./sendmail.js">
+	<script src="./sendmail.js">
 
 	</script>
 </body>

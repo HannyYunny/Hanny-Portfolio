@@ -437,7 +437,7 @@ body #wrap {
 }
 
 #container .career-outer .career_list_wrap ul li a .project_Ryan {
-	background: url('./image/Iam.jpg');
+	background: url('./image/Iam.JPG');
 	background-position: 55% 43%;
 	background-size: 200%;
 	height: 100%;
@@ -516,7 +516,7 @@ body #wrap {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
-#container #ajax-contact:after {
+#container #ajax-contact .wrap-box:after {
 	content: "";
 	clear: both;
 	display: block;
@@ -547,15 +547,16 @@ body #wrap {
 	display: block;
 	height: 50px;
 }
-#container .btnfield button {
+#container .btnfield input {
 	position: absolute;
-	right: 32px;
+	right: 0px;
 	bottom: -2%;
 	padding: 10px 15px;
 	font-size: 14px;
 	text-transform: uppercase;
 	background: transparent;
 	border: 1px solid #aaa;
+	width: 120px;
 }
 /*------------------ 반응형 웹 만들기 ---------------------------*/
 @media (min-width: 768px) {
@@ -569,7 +570,7 @@ body #wrap {
 	}
 	#scenes .scene h2 span {
 		line-height: 2.5;
-		font-size: 1.1em;
+		font-size: 1em;
 	}
 	#scenes .scene .scene-information p {
 		display: block;

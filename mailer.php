@@ -5,7 +5,6 @@
         // Get the form fields and remove whitespace.
         $name = strip_tags(trim($_POST["name"]));
 				$name = str_replace(array("\r","\n"),array(" "," "),$name);
-        $subject = $_POST["subject"];
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
         $message = trim($_POST["message"]);
 
@@ -22,7 +21,7 @@
         $recipient = "chosu1202@naver.com";
 
         // Set the email subject.
-        // $subject = "New contact from $name";
+        $subject = "New contact from $name";
 
         // Build the email content.
         $email_content = "Name: $name\n";
