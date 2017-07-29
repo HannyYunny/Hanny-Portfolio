@@ -35,7 +35,8 @@
         if (mail($recipient, $subject, $email_content, $email_headers)) {
             // Set a 200 (okay) response code.
             http_response_code(200);
-            echo "Thank You! Your message has been sent.";
+            // echo "Thank You! Your message has been sent.";
+            echo "<h1>Hi</h1>"
         } else {
             // Set a 500 (internal server error) response code.
             http_response_code(500);
