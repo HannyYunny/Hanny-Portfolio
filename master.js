@@ -44,6 +44,11 @@ Slider.prototype.initEvent = function() {
   }
   objthis.addBar()
   this.scenesheight.style.height = this.window_height-98 + 'px'
+
+  //window reload = scrolltop(0)
+  window.onbeforeunload=function() {
+    window.scrollTo(0,0)
+  }
 }
 
 Slider.prototype.moveright = function() {
@@ -81,4 +86,5 @@ Slider.prototype.addBar = function() {
   }
 }
 
+/* 헤더 스크롤 후 사라지게 하기 */
 var showslider = new Slider() //객체화
