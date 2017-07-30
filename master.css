@@ -558,15 +558,15 @@ body #wrap {
 	border: 1px solid #aaa;
 	width: 120px;
 }
-#form-messages .success {
+#form-messages.success {
 	display: inline-block;
+}
+#form-messages {
+	display: none;
 	position: absolute;
 	right: 11%;
 	bottom: 20%;
 	background: transparent;
-}
-#form-messages {
-	display: none;
 }
 
 /*------------------ 반응형 웹 만들기 ---------------------------*/
