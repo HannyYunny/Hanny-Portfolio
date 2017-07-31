@@ -28,8 +28,9 @@ $(function() {
       $('#name').val('');
       $('#email').val('');
       $('#message').val('');
-      
+
       $(formMessages).removeClass('success')
+      alert("Thanks. Your message could be sent!")
     })
     .fail(function(data) {
       // Make sure that the formMessages div has the 'error' class.
