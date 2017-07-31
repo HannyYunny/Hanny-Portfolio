@@ -86,5 +86,41 @@ Slider.prototype.addBar = function() {
   }
 }
 
-/* 헤더 스크롤 후 사라지게 하기 */
+/* 메뉴 클릭 시 이동하게 하기 */
+function Movevertical() {
+  this.getY = null //스크롤 이동할 Y 좌표. 배열임
+  this.innermenu = null // 메뉴 구하기 위한 값
+  this.clientY = null
+
+  this.init() // 함수 실행
+  this.initEvent() // 함수 실행
+}
+Movevertical.prototype.init = function () {
+  this.clientY = parseInt(window.innerHeight)
+  this.getY = [this.clientY, this.clientY+708, 2500]  //스크롤 이동할 Y 좌표. 배열임
+  this.innermenu = document.getElementsByClassName('menu-inner')[0] // 메뉴 구하기 위한 값
+}
+Movevertical.prototype.initEvent = function() {
+  var obj_this = this // 내부함수(익명함수 포함) 사용 시 이 객체의 소속이라는 것을 정의하기 위함
+  for (var i = 0; i < this.innermenu.getElementsByTagName('li').length; i++) {
+    this.innermenu.getElementsByTagName('li')[i].onclick = function() { // 메뉴 클릭 했을 때 movedown 실행
+      obj_this.movedown(this)
+    }
+  }
+}
+
+Movevertical.prototype.movedown = function(selected) {
+  var obj_this = this
+  for (var i = 0; i < this.innermenu.getElementsByTagName('li').length; i++) {
+    if (this.innermenu.getElementsByTagName('li')[i] == selected) {
+      break
+    }
+  }
+  movepage(i)
+  function movepage(index) {
+    scrollTo(0, obj_this.getY[index])
+  }
+}
+
 var showslider = new Slider() //객체화
+var pagedown = new Movevertical()

@@ -37,7 +37,7 @@ Header_hidden.prototype.hidden_Head = function() {
       }
     }
     if (parseFloat(obj_this.getheader.style.top)+obj_this.get_scroll.scrollTop < 0) {
-      obj_this.getheader.style.top = parseFloat(obj_this.getheader.style.top)+((obj_this.get_scroll.scrollTop+10)/10) + 'px'
+      obj_this.getheader.style.top = parseFloat(obj_this.getheader.style.top)+((obj_this.get_scroll.scrollTop+10)/2) + 'px'
       if (parseFloat(obj_this.getheader.style.top)*(-1) < 0.5) {
         obj_this.getheader.style.top = 0 + 'px'
         obj_this.timerID_header = 0

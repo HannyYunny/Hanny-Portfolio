@@ -113,7 +113,7 @@ body #wrap {
 }
 #wrap .header-inner .minilogo:hover {
 	opacity: 0.5;
-	transition: all 0.2s ease;
+	transition: all 0.3s ease;
 }
 #wrap .header-inner .minilogo a {
 	width: 77px;
@@ -150,14 +150,15 @@ body #wrap {
 	margin-left: 72px;
 }
 
-.header .header-inner .menu li > a span{
+.header .header-inner .menu li > span{
 	font-size: 17px;
 	color: #000;
 }
-.header .header-inner .menu ul li a span:hover, .header .header-inner .menu ul li i:hover {
+.header .header-inner .menu ul li span:hover, .header .header-inner .menu ul li:hover {
   color: #ababab;
 	text-shadow: 2px 2px 8px #eee;
-	transition: color 0.4s ease;
+	transition: color 0.3s ease;
+	cursor: pointer;
 }
 .header .header-inner .menu ul li i {
 	margin-left: 130px;
@@ -444,12 +445,23 @@ body #wrap {
 	border-radius: 5px;
 	filter: blur(2px);
 }
-
+#container .career-outer .career_list_wrap ul li {
+	position: relative;
+}
 #container .career-outer .career_list_wrap ul li a .coming {
-	background: url('./image/Kid-pilot.jpg') no-repeat;
+	/*background: url('./image/Kid-pilot.jpg') no-repeat;
 	background-position: 55% 43%;
 	background-size: 30%;
-	height: 100%;
+	height: 100%;*/
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	position: absolute;
+	top: 42%;
+	left: 27%;
+	letter-spacing: 0.6em;
+	color: #aaa;
+	font-weight: 100;
 }
 #container .career-outer .career_list_wrap ul li a:hover p {
 	background-size: 220%;
@@ -623,7 +635,10 @@ body #wrap {
 		background-size: 200%;
 	}
 	#container .career-outer .career_list_wrap ul li a .coming {
-		background-size: 100%;
+		/*background-size: 100%;*/
+		font-size: 20px;
+		top: 42%;
+		left: 30%;
 	}
 	#container .career-outer .career_list_wrap ul li+li {
 		width: 32%;
