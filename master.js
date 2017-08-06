@@ -148,7 +148,7 @@ Alertctr.prototype.initEvent = function() {
   }
 }
 Alertctr.prototype.alertclose = function() {
-  this.fdalert.style.display = "none" //display none으로 변경하기
+  this.fdalert.style.opacity = 0 //opacity:0으로 변경하기
 }
 
 var showslider = new Slider() //객체화

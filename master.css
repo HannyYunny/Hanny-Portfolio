@@ -82,6 +82,8 @@ body #wrap {
 	z-index: 9999;
 	text-align: center;
 	width: 100%;
+	opacity: 1;
+	transition: all 0.3s
 }
 #alert span {
 	font-size: 60px;
@@ -90,10 +92,10 @@ body #wrap {
 	right: 3%;
 	top: 1%;
 	display: block;
+	transition: color 0.3s ease-in-out;
 }
 #alert span:hover {
 	color: #aaa;
-	transition: color 0.3s ease-in-out;
 	cursor: pointer;
 }
 #alert h1 {
