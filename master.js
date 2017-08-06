@@ -122,5 +122,35 @@ Movevertical.prototype.movedown = function(selected) {
   }
 }
 
+//알러트 창 제어(닫기)
+function Alertctr() {
+  this.allWidth = null
+  this.allHeight = null
+  this.closebtn = null
+  this.fdalert = null
+
+  this.init()
+  this.initEvent()
+}
+
+Alertctr.prototype.init = function() {
+  this.allHeight = document.getElementById('wrap').offsetHeight
+  this.closebtn = document.getElementsByClassName('closebtn')
+  this.fdalert = document.getElementById('alert')
+}
+Alertctr.prototype.initEvent = function() {
+  var objthis = this
+  this.fdalert.style.height = this.allHeight + 'px'
+  for (var i = 0; i < this.closebtn.length; i++) {
+    this.closebtn[i].onclick = function() {
+      objthis.alertclose()
+    }
+  }
+}
+Alertctr.prototype.alertclose = function() {
+  this.fdalert.style.display = "none" //display none으로 변경하기
+}
+
 var showslider = new Slider() //객체화
 var pagedown = new Movevertical()
+var closealert = new Alertctr()

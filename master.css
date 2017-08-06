@@ -76,6 +76,44 @@ body #wrap {
 	margin: 0 auto;
 	table-layout: fixed;
 }
+#alert {
+	position: absolute;
+	background: rgba(0,0,0,0.8);
+	z-index: 9999;
+	text-align: center;
+	width: 100%;
+}
+#alert span {
+	font-size: 60px;
+	color: #fafafa;
+	position: absolute;
+	right: 3%;
+	top: 1%;
+	display: block;
+}
+#alert span:hover {
+	color: #aaa;
+	transition: color 0.3s ease-in-out;
+	cursor: pointer;
+}
+#alert h1 {
+	margin-top: 250px;
+	font-size: 36px;
+	color: #fafafa;
+	right: 3%;
+	top: 1%;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #fafafa;
+	display: inline-block;
+}
+#alert .alert.list {
+	margin-top: 30px;
+	font-size: 20px;
+	color: #fafafa;
+	line-height: 1.8em;
+	font-weight: 100;
+	display: block;
+}
 /*---------------------Header-----------------------------*/
 #wrap .header {
 	position: relative;
