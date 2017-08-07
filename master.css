@@ -68,7 +68,34 @@ body {
 body, html {
 	height: 100%;
 }
-
+body .btn_top {
+	width: 30px;
+	height: 30px;
+	position: fixed;
+	right: 5px;
+	bottom: 5px;
+	font-size: 12px;
+	line-height: 30px;
+	text-align: center;
+	z-index: 99999;
+	background: rgba(1, 0, 0, 0.5);
+	color: #fff;
+	border-radius: 3px;
+	overflow: hidden;
+	display: block;
+	box-shadow: 0 0px 10px 1px #fff;
+}
+body .btn_top .blind {
+	visibility: hidden;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+}
 body #wrap {
 	width: 100%;
 	height: 100%;
@@ -542,7 +569,7 @@ body #wrap {
 /*반응형 1100px와 동시 적용 검토*/
 #container .contact-inner {
 	margin: 0 auto;
-	border-top: 1px solid #aaa;
+	border-top: 1px solid #ddd;
 	padding: 20px 30px;
 	height: 100%;
 	position: relative;
@@ -620,7 +647,36 @@ body #wrap {
 	bottom: 20%;
 	background: transparent;
 }
-
+#footer {
+	height: 100%;
+	width: 100%;
+	background: #000;
+}
+#footer .footer-inner {
+	margin: 0 auto;
+	height: 100px;
+}
+#footer .footer-inner .snssite, #footer .footer-inner .copyright {
+	float: left;
+	padding: 40px 15px 0 0;
+}
+#footer .footer-inner .copyright {
+	float: right;
+}
+#footer .footer-inner li {
+	display: inline-block;
+  margin-right: 20px;
+}
+#footer .footer-inner li a {
+	color: #787878;
+	font-size: 12px;
+}
+#footer .footer-inner li i {
+	margin-right: 5px;
+}
+#footer span {
+	letter-spacing: 0.06em;
+}
 /*------------------ 반응형 웹 만들기 ---------------------------*/
 @media (min-width: 768px) {
 	#scenes .scene .scene-information {
@@ -633,7 +689,7 @@ body #wrap {
 	}
 	#scenes .scene h2 span {
 		line-height: 2.5;
-		font-size: 1em;
+		font-size: 0.8em;
 	}
 	#scenes .scene .scene-information p {
 		display: block;
@@ -656,6 +712,11 @@ body #wrap {
 	/*#container .Information-table div {
 		float: left;
 	}*/
+}
+@media (min-width: 830px) {
+	#footer .footer-inner {
+		max-width: 1060px;
+	}
 }
 @media (min-width: 1000px) {
 	#container .career-outer {
