@@ -50,7 +50,6 @@ Header_hidden.prototype.hidden_Head = function() {
 }
 
 Header_hidden.prototype.disabtn = function() {
-  console.log(1+1);
   if (this.get_scroll.scrollTop > 98) {
     for (var i = 0; i < this.btn.length; i++) {
       this.btn[i].style.opacity = 1
