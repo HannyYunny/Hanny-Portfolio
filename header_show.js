@@ -13,12 +13,15 @@ Header_hidden.prototype.init = function() {
   this.getheader = document.getElementsByClassName('header-inner')[0]
   this.timerID_header = 0
   this.get_scroll = document.getElementsByTagName('body')[0]
+  this.btn = null
 }
 Header_hidden.prototype.initEvent = function() {
   var obj_this = this
   this.getheader.style.top = 0 +'px'
+  this.btn = document.getElementsByClassName('btn_top')
   this.get_scroll.onscroll = function() {
     obj_this.hidden_Head(this)
+    obj_this.disabtn(this)
   }
 }
 
@@ -45,5 +48,20 @@ Header_hidden.prototype.hidden_Head = function() {
     }
   }
 }
+
+Header_hidden.prototype.disabtn = function() {
+  console.log(1+1);
+  if (this.get_scroll.scrollTop > 98) {
+    for (var i = 0; i < this.btn.length; i++) {
+      this.btn[i].style.opacity = 1
+    }
+  }
+  else {
+    for (var i = 0; i < this.btn.length; i++) {
+      this.btn[i].style.opacity = 0
+    }
+  }
+}
+
 
 var showheader = new Header_hidden()

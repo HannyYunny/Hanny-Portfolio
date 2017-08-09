@@ -84,6 +84,8 @@ body .btn_top {
 	overflow: hidden;
 	display: block;
 	box-shadow: 0 0px 10px 1px #fff;
+	opacity: 0;
+	transition: all 0.3s ease;
 }
 body .btn_top .blind {
 	visibility: hidden;

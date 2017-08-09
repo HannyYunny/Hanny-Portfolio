@@ -155,6 +155,47 @@ Alertctr.prototype.alertclose = function() {
   },100)
 }
 
+// 위로가기 버튼 제어
+function Topbtn() {
+  this.btn = null
+  this.clientY = null
+  this.get_scroll = null
+
+  this.init()
+  this.initEvent()
+}
+
+Topbtn.prototype.init = function() {
+  this.btn = document.getElementsByClassName('btn_top')
+  this.get_scroll = document.getElementsByTagName('body')[0]
+}
+
+Topbtn.prototype.initEvent = function() {
+  var obj__this = this
+  for (var i = 0; i < this.btn.length; i++) {
+    this.btn[i].onclick = function() {
+      obj__this.gotop(this)
+    }
+  }
+}
+
+Topbtn.prototype.gotop = function() {
+  this.clientY = window.scrollY
+  while (this.clientY>0) {
+    this.clientY -= 1
+    scrollTo(0,this.clientY)
+  }
+}
+
+Topbtn.prototype.disabtn = function() {
+  console.log(1+1);
+  if (this.get_scroll.scrollTop < 1006) {
+    for (var i = 0; i < this.btn.length; i++) {
+      this.btn[i].style.opacity = 0
+    }
+  }
+}
 var showslider = new Slider() //객체화
 var pagedown = new Movevertical()
 var closealert = new Alertctr()
+var go_top = new Topbtn()
