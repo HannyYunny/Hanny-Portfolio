@@ -91,6 +91,8 @@ function Movevertical() {
   this.getY = null //스크롤 이동할 Y 좌표. 배열임
   this.innermenu = null // 메뉴 구하기 위한 값
   this.clientY = null
+  this.timer_ID = null
+  this.countNum = null
 
   this.init() // 함수 실행
   this.initEvent() // 함수 실행
@@ -99,7 +101,10 @@ Movevertical.prototype.init = function () {
   this.clientY = parseInt(window.innerHeight)
   this.getY = [this.clientY, this.clientY+708, 2500]  //스크롤 이동할 Y 좌표. 배열임
   this.innermenu = document.getElementsByClassName('menu-inner')[0] // 메뉴 구하기 위한 값
+  this.timer_ID = 0
+  this.countNum = 0
 }
+
 Movevertical.prototype.initEvent = function() {
   var obj_this = this // 내부함수(익명함수 포함) 사용 시 이 객체의 소속이라는 것을 정의하기 위함
   for (var i = 0; i < this.innermenu.getElementsByTagName('li').length; i++) {
@@ -116,9 +121,18 @@ Movevertical.prototype.movedown = function(selected) {
       break
     }
   }
-  movepage(i)
-  function movepage(index) {
-    scrollTo(0, obj_this.getY[index])
+  if (this.timer_ID == 0) {
+    this.timer_ID = setInterval(movepage, 10)
+  }
+  function movepage() {
+    if (obj_this.countNum < obj_this.getY[i]) {
+      obj_this.countNum+=30
+      scrollTo(0, obj_this.countNum)
+    } else {
+      clearInterval(obj_this.timer_ID)
+      obj_this.countNum = 0
+      obj_this.timer_ID = 0
+    }
   }
 }
 
